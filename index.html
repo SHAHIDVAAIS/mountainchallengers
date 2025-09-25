@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Mountain Challengers - Premier trekking and expedition company in Gilgit-Baltistan. Explore the majestic mountains of Northern Pakistan with expert guides.">
+    <meta name="keywords" content="trekking, expeditions, tours, Gilgit-Baltistan, K2, Pakistan, mountain climbing, adventure tourism">
+    <meta name="author" content="Mountain Challengers">
+    <meta property="og:title" content="Mountain Challengers - Trekking & Expeditions in Gilgit-Baltistan">
+    <meta property="og:description" content="Experience the breathtaking beauty of Northern Pakistan with our expert-guided tours and expeditions.">
+    <meta property="og:type" content="website">
+    
+    <title>Mountain Challengers - Trekking & Expeditions in Gilgit-Baltistan</title>
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Swiper CSS for Sliders -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="loader">
+            <i class="fas fa-mountain"></i>
+            <p>Mountain Challengers</p>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <i class="fas fa-mountain"></i>
+                <span>Mountain Challengers</span>
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#packages" class="nav-link">Packages</a></li>
+                <li><a href="#destinations" class="nav-link">Destinations</a></li>
+                <li><a href="#gallery" class="nav-link">Gallery</a></li>
+                <li><a href="#testimonials" class="nav-link">Testimonials</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li><a href="#" class="nav-link btn-primary" onclick="openBookingModal()">Book Now</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-slider swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide hero-slide" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=1920');">
+                    <div class="hero-content">
+                        <h1 class="hero-title" data-aos="fade-up">Conquer the Peaks of Gilgit-Baltistan</h1>
+                        <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="200">Experience the ultimate adventure in Northern Pakistan</p>
+                        <div class="hero-buttons" data-aos="fade-up" data-aos-delay="400">
+                            <button class="btn btn-primary" onclick="scrollToSection('packages')">Explore Tours</button>
+                            <button class="btn btn-secondary" onclick="playIntroVideo()"><i class="fas fa-play"></i> Watch Video</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide hero-slide" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1519904981063-b0cf448d479e?auto=format&fit=crop&w=1920');">
+                    <div class="hero-content">
+                        <h1 class="hero-title">K2 Base Camp Expeditions</h1>
+                        <p class="hero-subtitle">Join us for the adventure of a lifetime</p>
+                        <div class="hero-buttons">
+                            <button class="btn btn-primary" onclick="openBookingModal()">Book Expedition</button>
+                            <button class="btn btn-secondary" onclick="scrollToSection('about')">Learn More</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+        <div class="hero-scroll">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <div class="features-grid">
+                <div class="feature-card" data-aos="fade-up">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Safety First</h3>
+                    <p>Expert guides with international certifications ensure your safety throughout the journey</p>
+                </div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+                    <i class="fas fa-route"></i>
+                    <h3>Custom Routes</h3>
+                    <p>Tailored expeditions designed to match your skill level and preferences</p>
+                </div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+                    <i class="fas fa-users"></i>
+                    <h3>Small Groups</h3>
+                    <p>Intimate group sizes for personalized attention and better experience</p>
+                </div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
+                    <i class="fas fa-medal"></i>
+                    <h3>20+ Years Experience</h3>
+                    <p>Two decades of successful expeditions in the Karakoram and Himalayan ranges</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>About Mountain Challengers</h2>
+                <p>Your Gateway to the Roof of the World</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text" data-aos="fade-right">
+                    <h3>Pioneers in Mountain Tourism</h3>
+                    <p>Mountain Challengers has been at the forefront of adventure tourism in Gilgit-Baltistan for over two decades. We specialize in organizing trekking expeditions, mountaineering courses, and cultural tours in the spectacular mountain ranges of Northern Pakistan.</p>
+                    <p>Our team consists of internationally certified mountain guides, experienced porters, and passionate travel enthusiasts who ensure every journey is safe, memorable, and transformative.</p>
+                    <div class="about-stats">
+                        <div class="stat">
+                            <h4>500+</h4>
+                            <p>Successful Expeditions</p>
+                        </div>
+                        <div class="stat">
+                            <h4>2000+</h4>
+                            <p>Happy Adventurers</p>
+                        </div>
+                        <div class="stat">
+                            <h4>50+</h4>
+                            <p>Peak Summits</p>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary" onclick="scrollToSection('contact')">Get in Touch</button>
+                </div>
+                <div class="about-images" data-aos="fade-left">
+                    <img src="https://images.unsplash.com/photo-1522163182402-834f871fd851?auto=format&fit=crop&w=600" alt="Mountain expedition">
+                    <img src="https://images.unsplash.com/photo-1551632811-561732d1e306?auto=format&fit=crop&w=600" alt="Trekking group">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Packages Section -->
+    <section id="packages" class="packages">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>Our Tour Packages</h2>
+                <p>Choose your next adventure from our carefully curated expeditions</p>
+            </div>
+            <div class="packages-filter" data-aos="fade-up">
+                <button class="filter-btn active" onclick="filterPackages('all')">All</button>
+                <button class="filter-btn" onclick="filterPackages('trekking')">Trekking</button>
+                <button class="filter-btn" onclick="filterPackages('expedition')">Expeditions</button>
+                <button class="filter-btn" onclick="filterPackages('cultural')">Cultural Tours</button>
+            </div>
+            <div class="packages-grid" id="packages-grid">
+                <!-- Package Cards will be dynamically loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Destinations Section -->
+    <section id="destinations" class="destinations">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>Popular Destinations</h2>
+                <p>Explore the most breathtaking locations in Gilgit-Baltistan</p>
+            </div>
+            <div class="destinations-grid">
+                <div class="destination-card" data-aos="zoom-in">
+                    <img src="https://images.unsplash.com/photo-1582650625259-82c9c1b58f0f?auto=format&fit=crop&w=400" alt="K2">
+                    <div class="destination-info">
+                        <h3>K2 Base Camp</h3>
+                        <p>8,611m - The Savage Mountain</p>
+                        <button class="btn btn-light" onclick="viewDestination('k2')">Explore</button>
+                    </div>
+                </div>
+                <div class="destination-card" data-aos="zoom-in" data-aos-delay="100">
+                    <img src="https://images.unsplash.com/photo-1580835845971-a393b73bf370?auto=format&fit=crop&w=400" alt="Nanga Parbat">
+                    <div class="destination-info">
+                        <h3>Nanga Parbat</h3>
+                        <p>8,126m - The Killer Mountain</p>
+                        <button class="btn btn-light" onclick="viewDestination('nanga-parbat')">Explore</button>
+                    </div>
+                </div>
+                <div class="destination-card" data-aos="zoom-in" data-aos-delay="200">
+                    <img src="https://images.unsplash.com/photo-1516548734449-91b2c0e99f67?auto=format&fit=crop&w=400" alt="Rakaposhi">
+                    <div class="destination-info">
+                        <h3>Rakaposhi</h3>
+                        <p>7,788m - Mother of Mist</p>
+                        <button class="btn btn-light" onclick="viewDestination('rakaposhi')">Explore</button>
+                    </div>
+                </div>
+                <div class="destination-card" data-aos="zoom-in" data-aos-delay="300">
+                    <img src="https://images.unsplash.com/photo-1544376798-89aa6b82c6cd?auto=format&fit=crop&w=400" alt="Hunza Valley">
+                    <div class="destination-info">
+                        <h3>Hunza Valley</h3>
+                        <p>Paradise on Earth</p>
+                        <button class="btn btn-light" onclick="viewDestination('hunza')">Explore</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>Adventure Gallery</h2>
+                <p>Moments captured from our expeditions</p>
+            </div>
+            <div class="gallery-grid" id="gallery-grid">
+                <!-- Gallery items will be loaded dynamically -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>What Our Adventurers Say</h2>
+                <p>Stories from those who conquered the peaks with us</p>
+            </div>
+            <div class="testimonials-slider swiper" data-aos="fade-up">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="testimonial-card">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p>"The K2 base camp trek was a life-changing experience. The guides were professional, knowledgeable, and ensured our safety throughout. Highly recommended!"</p>
+                            <div class="testimonial-author">
+                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100" alt="John">
+                                <div>
+                                    <h4>John Anderson</h4>
+                                    <p>Adventure Photographer</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="testimonial-card">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p>"Mountain Challengers made my dream of trekking in the Karakoram come true. The organization was impeccable and the team was incredibly supportive."</p>
+                            <div class="testimonial-author">
+                                <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=100" alt="Sarah">
+                                <div>
+                                    <h4>Sarah Mitchell</h4>
+                                    <p>Mountaineer</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="testimonial-card">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p>"From Hunza Valley to Fairy Meadows, every destination was magical. The local insights and cultural experiences added so much value to our journey."</p>
+                            <div class="testimonial-author">
+                                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=100" alt="Mike">
+                                <div>
+                                    <h4>Michael Chen</h4>
+                                    <p>Travel Blogger</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="team">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>Meet Our Expert Guides</h2>
+                <p>Certified professionals with years of mountaineering experience</p>
+            </div>
+            <div class="team-grid">
+                <div class="team-member" data-aos="flip-left">
+                    <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=300" alt="Ali Hassan">
+                    <h3>Ali Hassan</h3>
+                    <p>Lead Expedition Guide</p>
+                    <div class="team-social">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="team-member" data-aos="flip-left" data-aos-delay="100">
+                    <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=300" alt="Karim Shah">
+                    <h3>Karim Shah</h3>
+                    <p>Senior Trek Leader</p>
+                    <div class="team-social">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="team-member" data-aos="flip-left" data-aos-delay="200">
+                    <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=300" alt="Ahmed Raza">
+                    <h3>Ahmed Raza</h3>
+                    <p>Cultural Tour Expert</p>
+                    <div class="team-social">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>Get in Touch</h2>
+                <p>Start planning your next adventure with us</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info" data-aos="fade-right">
+                    <div class="info-card">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h3>Office Location</h3>
+                        <p>Main Bazaar, Karimabad<br>Hunza, Gilgit-Baltistan<br>Pakistan</p>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-phone"></i>
+                        <h3>Phone Numbers</h3>
+                        <p>+92 5813 457890<br>+92 3XX XXXXXXX</p>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-envelope"></i>
+                        <h3>Email Address</h3>
+                        <p>info@mountainchallengers.pk<br>bookings@mountainchallengers.pk</p>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="contact-form" data-aos="fade-left">
+                    <form id="contact-form">
+                        <div class="form-group">
+                            <input type="text" id="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" id="phone" placeholder="Your Phone">
+                        </div>
+                        <div class="form-group">
+                            <select id="service" required>
+                                <option value="">Select Service</option>
+                                <option value="trekking">Trekking</option>
+                                <option value="expedition">Expedition</option>
+                                <option value="cultural">Cultural Tour</option>
+                                <option value="custom">Custom Package</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content" data-aos="zoom-in">
+                <h2>Subscribe to Our Newsletter</h2>
+                <p>Get the latest updates on expeditions and special offers</p>
+                <form id="newsletter-form" class="newsletter-form">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3><i class="fas fa-mountain"></i> Mountain Challengers</h3>
+                    <p>Your trusted partner for adventures in Gilgit-Baltistan. Explore the roof of the world with safety and expertise.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#packages">Tour Packages</a></li>
+                        <li><a href="#destinations">Destinations</a></li>
+                        <li><a href="#testimonials">Reviews</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Popular Treks</h4>
+                    <ul>
+                        <li><a href="#">K2 Base Camp</a></li>
+                        <li><a href="#">Nanga Parbat Trek</a></li>
+                        <li><a href="#">Rakaposhi Base Camp</a></li>
+                        <li><a href="#">Fairy Meadows</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#">Travel Guide</a></li>
+                        <li><a href="#">Safety Tips</a></li>
+                        <li><a href="#">Equipment List</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Mountain Challengers. All rights reserved. | Designed with ❤️ for adventurers</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Booking Modal -->
+    <div id="booking-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeBookingModal()">&times;</span>
+            <h2>Book Your Adventure</h2>
+            <form id="booking-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Full Name</label>
+                        <input type="text" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="email" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Phone</label>
+                        <input type="tel" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Nationality</label>
+                        <input type="text" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Select Package</label>
+                    <select required>
+                        <option value="">Choose a package</option>
+                        <option value="k2-base">K2 Base Camp Trek</option>
+                        <option value="nanga-parbat">Nanga Parbat Expedition</option>
+                        <option value="hunza-tour">Hunza Valley Tour</option>
+                        <option value="custom">Custom Package</option>
+                    </select>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Preferred Date</label>
+                        <input type="date" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Number of People</label>
+                        <input type="number" min="1" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Special Requirements</label>
+                    <textarea rows="3" placeholder="Any dietary restrictions, medical conditions, or special requests"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit Booking Request</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Video Modal -->
+    <div id="video-modal" class="modal">
+        <div class="modal-content video-content">
+            <span class="close" onclick="closeVideoModal()">&times;</span>
+            <iframe id="intro-video" width="100%" height="500" src="" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="back-to-top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- WhatsApp Chat Widget -->
+    <div class="whatsapp-widget">
+        <a href="https://wa.me/923XXXXXXXXX" target="_blank">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
