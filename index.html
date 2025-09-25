@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Mountain Challengers - Premier trekking and expedition company in Gilgit-Baltistan. Explore the majestic mountains of Northern Pakistan with expert guides.">
     <meta name="keywords" content="trekking, expeditions, tours, Gilgit-Baltistan, K2, Pakistan, mountain climbing, adventure tourism">
-    <meta name="author" content="Mountain Challengers">
-    <meta property="og:title" content="Mountain Challengers - Trekking & Expeditions in Gilgit-Baltistan">
+    <meta name="author" content="Spantik Adventure">
+    <meta property="og:title" content="Spantik Adventure - Premium Trekking & Expeditions in Gilgit-Baltistan">
     <meta property="og:description" content="Experience the breathtaking beauty of Northern Pakistan with our expert-guided tours and expeditions.">
     <meta property="og:type" content="website">
     
-    <title>Mountain Challengers - Trekking & Expeditions in Gilgit-Baltistan</title>
+    <title>Spantik Adventure - Premium Trekking & Expeditions in Gilgit-Baltistan</title>
     
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -29,7 +29,7 @@
     <div id="preloader">
         <div class="loader">
             <i class="fas fa-mountain"></i>
-            <p>Mountain Challengers</p>
+            <p>Spantik Adventure</p>
         </div>
     </div>
 
@@ -38,7 +38,7 @@
         <div class="nav-container">
             <div class="nav-brand">
                 <i class="fas fa-mountain"></i>
-                <span>Mountain Challengers</span>
+                <span>Spantik Adventure</span>
             </div>
             <ul class="nav-menu" id="nav-menu">
                 <li><a href="#home" class="nav-link">Home</a></li>
@@ -50,6 +50,14 @@
                 <li><a href="#contact" class="nav-link">Contact</a></li>
                 <li><a href="#" class="nav-link btn-primary" onclick="openBookingModal()">Book Now</a></li>
             </ul>
+            <div class="nav-tools">
+                <button class="theme-toggle" id="theme-toggle" title="Toggle Dark Mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="language-toggle" title="Change Language">
+                    <i class="fas fa-globe"></i>
+                </button>
+            </div>
             <div class="hamburger" id="hamburger">
                 <span></span>
                 <span></span>
@@ -90,6 +98,37 @@
         </div>
     </section>
 
+    <!-- Live Weather Widget -->
+    <div class="weather-widget" id="weather-widget">
+        <div class="weather-header">
+            <h3><i class="fas fa-cloud-sun"></i> Live Weather</h3>
+            <button class="weather-close" onclick="toggleWeatherWidget()">×</button>
+        </div>
+        <div class="weather-locations">
+            <div class="weather-card" data-location="Gilgit">
+                <h4>Gilgit</h4>
+                <div class="weather-info">
+                    <span class="temp">22°C</span>
+                    <span class="condition">Clear</span>
+                </div>
+            </div>
+            <div class="weather-card" data-location="Hunza">
+                <h4>Hunza</h4>
+                <div class="weather-info">
+                    <span class="temp">18°C</span>
+                    <span class="condition">Partly Cloudy</span>
+                </div>
+            </div>
+            <div class="weather-card" data-location="Skardu">
+                <h4>Skardu</h4>
+                <div class="weather-info">
+                    <span class="temp">15°C</span>
+                    <span class="condition">Sunny</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Features Section -->
     <section class="features">
         <div class="container">
@@ -122,13 +161,13 @@
     <section id="about" class="about">
         <div class="container">
             <div class="section-header" data-aos="fade-up">
-                <h2>About Mountain Challengers</h2>
+                <h2>About Spantik Adventure</h2>
                 <p>Your Gateway to the Roof of the World</p>
             </div>
             <div class="about-content">
                 <div class="about-text" data-aos="fade-right">
                     <h3>Pioneers in Mountain Tourism</h3>
-                    <p>Mountain Challengers has been at the forefront of adventure tourism in Gilgit-Baltistan for over two decades. We specialize in organizing trekking expeditions, mountaineering courses, and cultural tours in the spectacular mountain ranges of Northern Pakistan.</p>
+                    <p>Spantik Adventure has been at the forefront of adventure tourism in Gilgit-Baltistan for over two decades. We specialize in organizing trekking expeditions, mountaineering courses, and cultural tours in the spectacular mountain ranges of Northern Pakistan.</p>
                     <p>Our team consists of internationally certified mountain guides, experienced porters, and passionate travel enthusiasts who ensure every journey is safe, memorable, and transformative.</p>
                     <div class="about-stats">
                         <div class="stat">
@@ -216,6 +255,61 @@
             </div>
         </div>
     </section>
+
+    <!-- Altitude Calculator Section -->
+    <section class="altitude-calculator">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>Altitude Acclimatization Calculator</h2>
+                <p>Plan your ascent safely with our smart calculator</p>
+            </div>
+            <div class="calculator-content" data-aos="fade-up">
+                <div class="calculator-form">
+                    <div class="calc-input">
+                        <label>Current Altitude (m)</label>
+                        <input type="number" id="current-alt" placeholder="e.g., 2500" />
+                    </div>
+                    <div class="calc-input">
+                        <label>Target Altitude (m)</label>
+                        <input type="number" id="target-alt" placeholder="e.g., 5000" />
+                    </div>
+                    <div class="calc-input">
+                        <label>Your Fitness Level</label>
+                        <select id="fitness-level">
+                            <option value="beginner">Beginner</option>
+                            <option value="intermediate">Intermediate</option>
+                            <option value="advanced">Advanced</option>
+                        </select>
+                    </div>
+                    <button class="btn btn-primary" onclick="calculateAcclimatization()">Calculate Plan</button>
+                </div>
+                <div class="calculator-result" id="calc-result">
+                    <h3>Your Acclimatization Plan</h3>
+                    <div class="result-content"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Currency Converter Widget -->
+    <div class="currency-widget">
+        <button class="currency-toggle" onclick="toggleCurrencyWidget()">
+            <i class="fas fa-dollar-sign"></i>
+        </button>
+        <div class="currency-content" id="currency-content">
+            <h4>Currency Converter</h4>
+            <input type="number" id="amount-input" placeholder="Amount" value="100">
+            <select id="currency-from">
+                <option value="USD">USD</option>
+                <option value="EUR">EUR</option>
+                <option value="GBP">GBP</option>
+            </select>
+            <span>to PKR</span>
+            <div class="conversion-result">
+                <span id="converted-amount">28,500 PKR</span>
+            </div>
+        </div>
+    </div>
 
     <!-- Gallery Section -->
     <section id="gallery" class="gallery">
@@ -425,7 +519,7 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-column">
-                    <h3><i class="fas fa-mountain"></i> Mountain Challengers</h3>
+                    <h3><i class="fas fa-mountain"></i> Spantik Adventure</h3>
                     <p>Your trusted partner for adventures in Gilgit-Baltistan. Explore the roof of the world with safety and expertise.</p>
                     <div class="footer-social">
                         <a href="#"><i class="fab fa-facebook"></i></a>
@@ -463,7 +557,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 Mountain Challengers. All rights reserved. | Designed with ❤️ for adventurers</p>
+                <p>&copy; 2024 Spantik Adventure. All rights reserved. | Designed with ❤️ for adventurers</p>
             </div>
         </div>
     </footer>
@@ -531,6 +625,37 @@
         </div>
     </div>
 
+    <!-- 360 Virtual Tour Modal -->
+    <div id="virtual-tour-modal" class="modal">
+        <div class="modal-content virtual-tour-content">
+            <span class="close" onclick="closeVirtualTour()">&times;</span>
+            <h2 id="tour-title">360° Virtual Tour</h2>
+            <div class="virtual-tour-container">
+                <div class="panorama-viewer" id="panorama-viewer">
+                    <img id="panorama-image" src="" alt="360 View">
+                    <div class="panorama-controls">
+                        <button onclick="panLeft()"><i class="fas fa-chevron-left"></i></button>
+                        <button onclick="resetView()"><i class="fas fa-compress"></i></button>
+                        <button onclick="panRight()"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                    <div class="panorama-info">
+                        <p><i class="fas fa-mouse"></i> Click and drag to look around</p>
+                        <p><i class="fas fa-search-plus"></i> Scroll to zoom</p>
+                    </div>
+                </div>
+                <div class="tour-spots">
+                    <h3>Tour Highlights</h3>
+                    <div class="spot-list">
+                        <button class="spot-btn active" onclick="changeView(0)">Base Camp View</button>
+                        <button class="spot-btn" onclick="changeView(1)">Summit Approach</button>
+                        <button class="spot-btn" onclick="changeView(2)">Valley Panorama</button>
+                        <button class="spot-btn" onclick="changeView(3)">Glacier View</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Back to Top Button -->
     <button id="back-to-top" class="back-to-top">
         <i class="fas fa-chevron-up"></i>
@@ -542,6 +667,33 @@
             <i class="fab fa-whatsapp"></i>
         </a>
     </div>
+
+    <!-- AI Chatbot -->
+    <div class="ai-chatbot" id="ai-chatbot">
+        <div class="chatbot-header">
+            <img src="https://ui-avatars.com/api/?name=SA&background=e74c3c&color=fff" alt="Bot">
+            <div class="chatbot-info">
+                <h4>Spantik Assistant</h4>
+                <span class="status">Online</span>
+            </div>
+            <button class="chatbot-minimize" onclick="toggleChatbot()">
+                <i class="fas fa-minus"></i>
+            </button>
+        </div>
+        <div class="chatbot-messages" id="chatbot-messages">
+            <div class="bot-message">
+                <p>Hello! I'm your adventure assistant. How can I help you plan your trek today?</p>
+            </div>
+        </div>
+        <div class="chatbot-input">
+            <input type="text" id="chat-input" placeholder="Type your message...">
+            <button onclick="sendChatMessage()"><i class="fas fa-paper-plane"></i></button>
+        </div>
+    </div>
+    <button class="chatbot-toggle" onclick="toggleChatbot()">
+        <i class="fas fa-comments"></i>
+        <span class="chat-notification">1</span>
+    </button>
 
     <!-- Scripts -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
